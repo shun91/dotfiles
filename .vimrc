@@ -56,6 +56,8 @@ let g:neocomplcache_enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+" カーソル移動で作動しないようにする。
+let g:neocomplcache_enable_insert_char_pre = 1
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
     \ 'default' : ''
@@ -81,6 +83,12 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 "======================
 " Vim default settings
 "======================
+
+" ファイルタイプがhtml,xml,eruby,phpの時、閉じタグを自動補完
+autocmd FileType html inoremap <silent> <buffer> </ </<C-x><C-o>
+autocmd FileType xml inoremap <silent> <buffer> </ </<C-x><C-o>
+autocmd FileType php inoremap <silent> <buffer> </ </<C-x><C-o>
+autocmd FileType eruby inoremap <silent> <buffer> </ </<C-x><C-o>
 
 " シンタックスハイライトをon
 syntax enable
