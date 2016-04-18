@@ -18,6 +18,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # viコマンドでbrewでインストールしたvimが起動するように
 alias vi='/usr/local/bin/vim'
 
+# PC毎のzshrc
+source ~/.zshrc_local
+
 export PATH
 
 # 以下，少し凝ったzshrc ###################################################
