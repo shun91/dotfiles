@@ -85,10 +85,14 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 "======================
 
 " ファイルタイプがhtml,xml,eruby,phpの時、閉じタグを自動補完
-autocmd FileType html inoremap <silent> <buffer> </ </<C-x><C-o>
-autocmd FileType xml inoremap <silent> <buffer> </ </<C-x><C-o>
-autocmd FileType php inoremap <silent> <buffer> </ </<C-x><C-o>
-autocmd FileType eruby inoremap <silent> <buffer> </ </<C-x><C-o>
+augroup MyXML
+  autocmd!
+  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype php inoremap <buffer> </ </<C-x><C-o>
+augroup END
+autocmd! FileType eruby,html,markdown,xml,php setlocal omnifunc=htmlcomplete#CompleteTags
 
 " シンタックスハイライトをon
 syntax enable
