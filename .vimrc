@@ -79,6 +79,17 @@ inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
+"============================
+" vim-indent-guides settings
+"============================
+
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_start_level=2
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+let g:indent_guides_color_change_percent = 30
+let g:indent_guides_guide_size = 1
 
 "======================
 " Vim default settings
@@ -93,6 +104,9 @@ augroup MyXML
   autocmd Filetype php inoremap <buffer> </ </<C-x><C-o>
 augroup END
 autocmd! FileType eruby,html,markdown,xml,php setlocal omnifunc=htmlcomplete#CompleteTags
+
+" 拡張子が.mdをmarkdownとして扱う
+au BufRead,BufNewFile *.md set filetype=markdown
 
 " シンタックスハイライトをon
 syntax enable
@@ -133,5 +147,5 @@ set showcmd
 " Insertモード中に<BS>で直前の文字を消せるように
 set backspace=indent,eol,start
 " カラースキーマの指定
-colorscheme desert
+colorscheme molokai
 
