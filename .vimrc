@@ -79,6 +79,32 @@ inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
+"=====================
+" neosnippet settings
+"=====================
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+ 
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+ 
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+" 自作 snippet ファイルのパス
+let g:neosnippet#snippets_directory = '~/.vim/snippets/'
+
+
 "============================
 " vim-indent-guides settings
 "============================
@@ -90,6 +116,26 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 let g:indent_guides_color_change_percent = 30
 let g:indent_guides_guide_size = 1
+
+
+"=======================
+" vim-quickrun settings
+"=======================
+
+let g:quickrun_config = {
+\   "html" : {
+\				'command' : 'open',
+\				'exec' : '%c %s',
+\				'outputter' : 'error',
+\				'outputter/error/success' : 'null'
+\   },
+\   "markdown" : {
+\       'command' : 'PrevimOpen',
+\       'exec' : '%c',
+\       'outputter' : 'browser',
+\   }
+\}
+
 
 "======================
 " Vim default settings
@@ -107,6 +153,9 @@ autocmd! FileType eruby,html,markdown,xml,php setlocal omnifunc=htmlcomplete#Com
 
 " 拡張子が.mdをmarkdownとして扱う
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" python編集時はtabのサイズを4に
+autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " シンタックスハイライトをon
 syntax enable
