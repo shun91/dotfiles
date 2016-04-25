@@ -137,6 +137,13 @@ let g:quickrun_config = {
 \}
 
 
+"=================
+" previm settings
+"=================
+
+let g:previm_open_cmd = 'open'
+
+
 "======================
 " Vim default settings
 "======================
