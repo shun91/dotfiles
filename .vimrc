@@ -123,6 +123,9 @@ let g:indent_guides_guide_size = 1
 "=======================
 
 let g:quickrun_config = {
+\   "_"    : {
+\       'split' : 'botright 8sp'
+\   },
 \   "html" : {
 \				'command' : 'open',
 \				'exec' : '%c %s',
@@ -202,6 +205,8 @@ set smartindent
 set showcmd
 " Insertモード中に<BS>で直前の文字を消せるように
 set backspace=indent,eol,start
+" vimのクリップボードとシステムのクリップボードを同期
+set clipboard+=unnamed
 " カラースキーマの指定
 colorscheme molokai
 
