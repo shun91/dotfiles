@@ -48,9 +48,6 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 
-# PC毎のzshrc
-source ~/.zshrc_local
-
 export PATH
 
 # 以下，少し凝ったzshrc ###################################################
@@ -219,3 +216,8 @@ case ${OSTYPE} in
 esac
 
 # vim:set ft=zsh:
+
+# 少し凝ったzshrcここまで #################################################
+
+# PC毎のzshrcの読込
+source ~/.zshrc_local
