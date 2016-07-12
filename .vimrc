@@ -196,6 +196,27 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " python編集時はtabのサイズを4に
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
+" cmd+p でペースト時は自動的にpaste modeとなる
+if &term =~ "xterm"
+    let &t_ti .= "\e[?2004h"
+    let &t_te .= "\e[?2004l"
+    let &pastetoggle = "\e[201~"
+ 
+    function XTermPasteBegin(ret)
+        set paste
+        return a:ret
+    endfunction
+ 
+    noremap <special> <expr> <Esc>[200~ XTermPasteBegin("0i")
+    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+    cnoremap <special> <Esc>[200~ <nop>
+    cnoremap <special> <Esc>[201~ <nop>
+endif
+
+" インデント変更時はvisulal modeから抜けないようにする
+vnoremap > >gv
+vnoremap < <gv
+
 " シンタックスハイライトをon
 syntax enable
 " 行番号表示をon
