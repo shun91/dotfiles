@@ -12,6 +12,10 @@ unset LC_ALL
 # Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
 
+# anyenv
+PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
 #for zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
@@ -47,6 +51,9 @@ alias gst='git stash'
 alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
+
+# ファイル内検索エイリアス
+alias fgrep='find ./ -type f -print | xargs grep'
 
 export PATH
 
