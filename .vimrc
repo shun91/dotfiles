@@ -176,6 +176,14 @@ endfunction
 
 autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
 
+"==============
+" tyru/caw.vim
+"==============
+
+" コメントの追加・削除を行なう
+nmap <Leader>/ <Plug>(caw:zeropos:toggle)
+vmap <Leader>/ <Plug>(caw:zeropos:toggle)
+
 "======================
 " Vim default settings
 "======================
