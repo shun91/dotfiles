@@ -45,3 +45,6 @@ repo = 'tell-k/vim-autopep8'
 
 [[plugins]]
 repo = 'tyru/caw.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
