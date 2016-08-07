@@ -12,10 +12,6 @@ unset LC_ALL
 # Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
 
-# anyenv
-PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-
 #for zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
