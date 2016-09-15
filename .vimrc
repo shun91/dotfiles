@@ -194,12 +194,11 @@ let g:NERDTreeShowBookmarks=1
 " 隠しファイルも表示
 let NERDTreeShowHidden = 1
 
-" ファイル名が指定されてVIMが起動した場合はNERDTreeを初期表示
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" NERDTreeTabsを初期表示
+let g:nerdtree_tabs_open_on_console_startup=1
 
 " Ctrl+nでNERDTreeを表示
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> <plug>NERDTreeTabsToggle<CR>
 
 " NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -229,6 +228,49 @@ let g:NERDTreeDirArrowCollapsible = '▼'
 " Vim default settings
 "======================
 
+" タブ切り替えに関する設定
+" Anywhere SID.
+function! s:SID_PREFIX()
+  return matchstr(expand('<sfile>'), '<SNR>\d\+_zeSID_PREFIX$')
+endfunction
+" Set tabline.
+function! s:my_tabline()  "{{{
+  let s = ''
+  for i in range(1, tabpagenr('$'))
+    let bufnrs = tabpagebuflist(i)
+    let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first indow, first appears
+    let no = i  " display 0-origin tabpagenr.
+    let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
+    let title = fnamemodify(bufname(bufnr), ':t')
+    let title = '[' . title . ']'
+    let s .= '%'.i.'T'
+    let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : TabLine') . '#'
+    let s .= no . ':' . title
+    let s .= mod
+    let s .= '%#TabLineFill# '
+  endfor
+  let s .= '%#TabLineFill#%T%=%#TabLine#'
+  return s
+endfunction "}}}
+let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
+set showtabline=2 " 常にタブラインを表示
+" The prefix key.
+nnoremap    [Tag]   <Nop>
+nmap    t [Tag]
+" Tab jump
+for n in range(1, 9)
+  execute 'nnoremap <silent> [Tag]'.n  ':<C->tabnext'.n.'<CR>'
+endfor
+" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
+map <silent> [Tag]c :tablast <bar> tabnew<CR>
+" tc 新しいタブを一番右に作る
+map <silent> [Tag]x :tabclose<CR>
+" tx タブを閉じる
+map <silent> [Tag]n :tabnext<CR>
+" tn 次のタブ
+map <silent> [Tag]p :tabprevious<CR>
+" tp 前のタブ
+
 " ファイルタイプがhtml,xml,eruby,phpの時、閉じタグを自動補完
 augroup MyXML
   autocmd!
@@ -243,7 +285,7 @@ autocmd! FileType eruby,html,markdown,xml,php setlocal omnifunc=htmlcomplete#Com
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " python編集時はtabのサイズを4に
-autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+autocmd FileType python,php setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " cmd+p でペースト時は自動的にpaste modeとなる
 if &term =~ "xterm"
@@ -290,6 +332,8 @@ set expandtab
 set tabstop=2
 " 自動挿入されるインデントのスペース幅
 set shiftwidth=2
+" タブ入力時に何文字の半角スペースに変換するか
+set softtabstop=2
 " ヘルプの言語
 set helplang=ja,en
 " カレント行の強調表示をon
