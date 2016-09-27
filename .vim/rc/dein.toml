@@ -1,53 +1,47 @@
 [[plugins]]
+# パッケージ管理
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+# 自動補完
 repo = 'Shougo/neocomplcache'
 
 [[plugins]]
-repo = 'plasticboy/vim-markdown'
-
-[[plugins]]
-repo = 'kannokanno/previm'
-
-[[plugins]]
-repo = 'tyru/open-browser.vim'
-
-[[plugins]]
-repo = 'hail2u/vim-css3-syntax'
-
-[[plugins]]
-repo = 'othree/html5.vim'
-
-[[plugins]]
-repo = 'jelera/vim-javascript-syntax'
-
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-
-[[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
-
-[[plugins]]
-repo = 'tomtom/tcomment_vim'
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-
-[[plugins]]
+# スニペットによる自動補完
 repo = 'Shougo/neosnippet.vim'
 
 [[plugins]]
+# スニペットの定義集
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'tell-k/vim-autopep8'
+# Vimからブラウザを開く
+repo = 'tyru/open-browser.vim'
 
 [[plugins]]
+# ステータスラインのデコレート
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+# インデントに色をつけて見やすく
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+# コメントアウトのトグル
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+# Vim上でプログラムの実行
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+# ファイルタイプにあったコメントアウトを挿入
 repo = 'tyru/caw.vim'
 
 [[plugins]]
+# ファイルエクスプローラー
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
+# 全てのタブでnerdtreeウインドウを共有
 repo = 'jistr/vim-nerdtree-tabs'
