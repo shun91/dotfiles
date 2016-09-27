@@ -1,5 +1,5 @@
 [[plugins]]
-# パッケージ管理 
+# パッケージ管理
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
