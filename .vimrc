@@ -43,11 +43,17 @@ if has('vim_starting') && dein#check_install()
 endif
 
 "======================
-" Vim default settings
+" neosnippet settings
 "======================
 
+" スニペットが選択されてる場合、Enterキーで展開
+" tomlに書くと何故か動かないので、ここに書いている
 imap <expr><CR> neosnippet#expandable() <bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)"
 \: pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
+
+"======================
+" Vim default settings
+"======================
 
 " タブ切り替えに関する設定
 " Anywhere SID.
