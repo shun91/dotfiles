@@ -46,6 +46,9 @@ endif
 " Vim default settings
 "======================
 
+imap <expr><CR> neosnippet#expandable() <bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
+
 " タブ切り替えに関する設定
 " Anywhere SID.
 function! s:SID_PREFIX()
