@@ -84,6 +84,15 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 # インデントに色をつけて見やすく
 repo = 'nathanaelkane/vim-indent-guides'
+hook_add = ''' " {{{
+  let g:indent_guides_enable_on_vim_startup=1
+  let g:indent_guides_start_level=2
+  let g:indent_guides_auto_colors=0
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+  let g:indent_guides_color_change_percent = 30
+  let g:indent_guides_guide_size = 1
+''' # }}}
 
 [[plugins]]
 # コメントアウトのトグル
@@ -92,14 +101,74 @@ repo = 'tomtom/tcomment_vim'
 [[plugins]]
 # Vim上でプログラムの実行
 repo = 'thinca/vim-quickrun'
+hook_add = ''' " {{{
+  let g:quickrun_config = {
+  \   "_"    : {
+  \       'split' : 'botright 8sp'
+  \   },
+  \   "html" : {
+  \       'command' : 'open',
+  \       'exec' : '%c %s',
+  \       'outputter' : 'error',
+  \       'outputter/error/success' : 'null'
+  \   },
+  \   "markdown" : {
+  \       'command' : 'PrevimOpen',
+  \       'exec' : '%c',
+  \       'outputter' : 'browser',
+  \   }
+  \}
+''' # }}}
 
 [[plugins]]
 # ファイルタイプにあったコメントアウトを挿入
 repo = 'tyru/caw.vim'
+hook_add = ''' " {{{
+  " コメントの追加・削除を行なう
+  nmap <Leader>/ <Plug>(caw:zeropos:toggle)
+  vmap <Leader>/ <Plug>(caw:zeropos:toggle)
+''' # }}}
 
 [[plugins]]
 # ファイルエクスプローラー
 repo = 'scrooloose/nerdtree'
+hook_add = ''' " {{{
+  " ブックマークを初期表示
+  let g:NERDTreeShowBookmarks=1
+
+  " 隠しファイルも表示
+  let NERDTreeShowHidden = 1
+
+  " NERDTreeTabsを初期表示
+  let g:nerdtree_tabs_open_on_console_startup=1
+
+  " Ctrl+nでNERDTreeを表示
+  map <C-n> <plug>NERDTreeTabsToggle<CR>
+
+  " NERDTress File highlighting
+  function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+   exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+   exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+  endfunction
+
+  call NERDTreeHighlightFile('py',     'yellow',  'none', 'yellow',  '#151515')
+  call NERDTreeHighlightFile('md',     'blue',    'none', '#3366FF', '#151515')
+  call NERDTreeHighlightFile('yml',    'yellow',  'none', 'yellow',  '#151515')
+  call NERDTreeHighlightFile('config', 'yellow',  'none', 'yellow',  '#151515')
+  call NERDTreeHighlightFile('conf',   'yellow',  'none', 'yellow',  '#151515')
+  call NERDTreeHighlightFile('json',   'yellow',  'none', 'yellow',  '#151515')
+  call NERDTreeHighlightFile('html',   'yellow',  'none', 'yellow',  '#151515')
+  call NERDTreeHighlightFile('styl',   'cyan',    'none', 'cyan',    '#151515')
+  call NERDTreeHighlightFile('css',    'cyan',    'none', 'cyan',    '#151515')
+  call NERDTreeHighlightFile('rb',     'Red',     'none', 'red',     '#151515')
+  call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
+  call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
+
+  " ディレクトリ表示記号を変更する
+  let g:NERDTreeDirArrows = 1
+  let g:NERDTreeDirArrowExpandable  = '▶'
+  let g:NERDTreeDirArrowCollapsible = '▼'
+''' # }}}
 
 [[plugins]]
 # 全てのタブでnerdtreeウインドウを共有
