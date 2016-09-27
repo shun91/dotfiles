@@ -33,6 +33,33 @@ on_ft = ['javascript']
 # pep8による自動修正
 repo = 'tell-k/vim-autopep8'
 on_ft = ['python']
+hook_add = ''' " {{{
+  function! Preserve(command)
+      " Save the last search.
+      let search = @/
+      " Save the current cursor position.
+      let cursor_position = getpos('.')
+      " Save the current window position.
+      normal! H
+      let window_position = getpos('.')
+      call setpos('.', cursor_position)
+      " Execute the command.
+      execute a:command
+      " Restore the last search.
+      let @/ = search
+      " Restore the previous window position.
+      call setpos('.', window_position)
+      normal! zt
+      " Restore the previous cursor position.
+      call setpos('.', cursor_position)
+  endfunction
+
+  function! Autopep8()
+      call Preserve(':silent %!autopep8 -')
+  endfunction
+
+  autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
+''' # }}}
 
 ########################################
 # markdown
@@ -47,3 +74,6 @@ on_ft = ['markdown']
 # Markdownのプレビュー
 repo = 'kannokanno/previm'
 on_ft = ['markdown']
+hook_add = ''' " {{{
+  let g:previm_open_cmd = 'open'
+''' # }}}
