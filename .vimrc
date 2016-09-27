@@ -42,125 +42,6 @@ if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
 
-"============================
-" vim-indent-guides settings
-"============================
-
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_start_level=2
-let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
-let g:indent_guides_color_change_percent = 30
-let g:indent_guides_guide_size = 1
-
-
-"=======================
-" vim-quickrun settings
-"=======================
-
-let g:quickrun_config = {
-\   "_"    : {
-\       'split' : 'botright 8sp'
-\   },
-\   "html" : {
-\				'command' : 'open',
-\				'exec' : '%c %s',
-\				'outputter' : 'error',
-\				'outputter/error/success' : 'null'
-\   },
-\   "markdown" : {
-\       'command' : 'PrevimOpen',
-\       'exec' : '%c',
-\       'outputter' : 'browser',
-\   }
-\}
-
-
-"=================
-" previm settings
-"=================
-
-let g:previm_open_cmd = 'open'
-
-"=======================
-" vim-autopep8 settings
-"=======================
-
-function! Preserve(command)
-    " Save the last search.
-    let search = @/
-    " Save the current cursor position.
-    let cursor_position = getpos('.')
-    " Save the current window position.
-    normal! H
-    let window_position = getpos('.')
-    call setpos('.', cursor_position)
-    " Execute the command.
-    execute a:command
-    " Restore the last search.
-    let @/ = search
-    " Restore the previous window position.
-    call setpos('.', window_position)
-    normal! zt
-    " Restore the previous cursor position.
-    call setpos('.', cursor_position)
-endfunction
-
-function! Autopep8()
-    call Preserve(':silent %!autopep8 -')
-endfunction
-
-autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
-
-"=======================
-" tyru/caw.vim settings
-"=======================
-
-" コメントの追加・削除を行なう
-nmap <Leader>/ <Plug>(caw:zeropos:toggle)
-vmap <Leader>/ <Plug>(caw:zeropos:toggle)
-
-"===================
-" NREDTree settings
-"===================
-
-" ブックマークを初期表示
-let g:NERDTreeShowBookmarks=1
-
-" 隠しファイルも表示
-let NERDTreeShowHidden = 1
-
-" NERDTreeTabsを初期表示
-let g:nerdtree_tabs_open_on_console_startup=1
-
-" Ctrl+nでNERDTreeを表示
-map <C-n> <plug>NERDTreeTabsToggle<CR>
-
-" NERDTress File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-call NERDTreeHighlightFile('py',     'yellow',  'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('md',     'blue',    'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml',    'yellow',  'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('config', 'yellow',  'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('conf',   'yellow',  'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('json',   'yellow',  'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('html',   'yellow',  'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('styl',   'cyan',    'none', 'cyan',    '#151515')
-call NERDTreeHighlightFile('css',    'cyan',    'none', 'cyan',    '#151515')
-call NERDTreeHighlightFile('rb',     'Red',     'none', 'red',     '#151515')
-call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
-
-" ディレクトリ表示記号を変更する
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable  = '▶'
-let g:NERDTreeDirArrowCollapsible = '▼'
-
 "======================
 " Vim default settings
 "======================
@@ -221,7 +102,7 @@ autocmd! FileType eruby,html,markdown,xml,php setlocal omnifunc=htmlcomplete#Com
 " 拡張子が.mdをmarkdownとして扱う
 au BufRead,BufNewFile *.md set filetype=markdown
 
-" python編集時はtabのサイズを4に
+" python, php編集時はtabのサイズを4に
 autocmd FileType python,php setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " cmd+p でペースト時は自動的にpaste modeとなる
@@ -289,4 +170,3 @@ set backspace=indent,eol,start
 set clipboard+=unnamed
 " カラースキーマの指定
 colorscheme molokai
-
