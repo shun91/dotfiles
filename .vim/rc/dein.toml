@@ -42,6 +42,7 @@ hook_add = ''' " {{{
 [[plugins]]
 # スニペットによる自動補完
 repo = 'Shougo/neosnippet.vim'
+depends = ['Shougo/neocomplcache']
 hook_add = ''' " {{{
   " Plugin key-mappings.
   imap <C-k>     <Plug>(neosnippet_expand_or_jump)
