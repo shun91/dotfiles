@@ -72,6 +72,10 @@ hook_add = ''' " {{{
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
+# 閉じ括弧・コロンの自動補完
+repo = 'kana/vim-smartinput'
+
+[[plugins]]
 # Vimからブラウザを開く
 repo = 'tyru/open-browser.vim'
 
