@@ -108,6 +108,13 @@ augroup MyXML
 augroup END
 autocmd! FileType eruby,html,markdown,xml,php setlocal omnifunc=htmlcomplete#CompleteTags
 
+" 行末の空白文字をハイライト
+augroup HighlightTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
+
 " 拡張子が.mdをmarkdownとして扱う
 au BufRead,BufNewFile *.md set filetype=markdown
 
@@ -179,3 +186,5 @@ set backspace=indent,eol,start
 set clipboard+=unnamed
 " カラースキーマの指定
 colorscheme molokai
+" 80 桁目に印を付ける
+set colorcolumn=80
