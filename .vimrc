@@ -116,7 +116,7 @@ augroup HighlightTrailingSpaces
 augroup END
 
 " 拡張子が.mdをmarkdownとして扱う
-au BufRead,BufNewFile *.md set filetype=markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 " python, php編集時はtabのサイズを4に
 autocmd FileType python,php setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
@@ -188,3 +188,7 @@ set clipboard+=unnamed
 colorscheme molokai
 " 80 桁目に印を付ける
 set colorcolumn=80
+" マクロやコマンドを実行する間、画面を再描画しない(スクロールが重くなる対策)
+set lazyredraw
+" 高速ターミナル接続を行う(スクロールが重くなる対策)
+set ttyfast
