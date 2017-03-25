@@ -42,20 +42,20 @@ colors
 # lsのディレクトリ色をマゼンタに
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
-# プロンプト表示のフォーマット
-PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
-%# "
-
 # vcs_info（gitのブランチ名などの表示）
-autoload -Uz vcs_info
-autoload -Uz add-zsh-hook
-zstyle ':vcs_info:*' formats '%F{green}(%s)-[%b]%f'
-zstyle ':vcs_info:*' actionformats '%F{red}(%s)-[%b|%a]%f'
-function _update_vcs_info_msg() {
-    LANG=en_US.UTF-8 vcs_info
-    RPROMPT="${vcs_info_msg_0_}"
-}
-add-zsh-hook precmd _update_vcs_info_msg
+# 参考：http://tkengo.github.io/blog/2013/05/12/zsh-vcs-info/
+autoload -Uz vcs_info # vcs_infoを読み込む
+zstyle ':vcs_info:git:*' check-for-changes true # commit済かなどのチェック
+zstyle ':vcs_info:*' formats "%F{green}%c%u(%b)%f" # 基本の表示フォーマット
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}a" # addしてないファイルがある
+zstyle ':vcs_info:git:*' stagedstr "%F{red}c" # commitしてないファイルがある
+zstyle ':vcs_info:*' actionformats '%F{yellow}(%b|%a)' # conflictなどが起こった時
+precmd () { vcs_info } # vcs_infoを実行
+setopt prompt_subst # vcs_infoの内容を表示するのに必要
+
+# プロンプト表示のフォーマット
+PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~ ${vcs_info_msg_0_}
+$ "
 
 ###############################################################################
 # alias設定
