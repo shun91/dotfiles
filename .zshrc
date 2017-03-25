@@ -54,8 +54,8 @@ precmd () { vcs_info } # vcs_infoを実行
 setopt prompt_subst # vcs_infoの内容を表示するのに必要
 
 # プロンプト表示のフォーマット
-PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~ ${vcs_info_msg_0_}
-$ "
+PROMPT='%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~ ${vcs_info_msg_0_}
+$ '
 
 ###############################################################################
 # alias設定
