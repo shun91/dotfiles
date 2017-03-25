@@ -22,5 +22,9 @@ $ cd ~/dotfiles
 $ git pull
 ```
 
+## zshに独自の設定を追加したい場合
+`~/.zshrc_local`に設定を追加すれば良い。
+（`~/.zshrc`の最後で`~/.zshrc_local`が読み込まれるようになっている）
+
 ## 参考URL
 http://qiita.com/okamos/items/7f5461814e8ed8916870
