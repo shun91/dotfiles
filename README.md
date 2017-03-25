@@ -5,7 +5,7 @@ dotfiles
 ```
 $ cd
 $ git clone https://github.com/shun91/dotfiles.git
-$ sh ~/dotfiles/symlink.sh
+$ sh ~/dotfiles/setup.sh
 ```
 
 ## dotfilesを変更した時
@@ -20,6 +20,7 @@ $ git push -u origin master
 ```
 $ cd ~/dotfiles
 $ git pull
+$ sh ~/dotfiles/setup.sh # 必要があれば
 ```
 
 ## zshに独自の設定を追加したい場合
