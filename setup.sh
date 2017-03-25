@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ### 各ファイルにsymlinkをはる ###
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
