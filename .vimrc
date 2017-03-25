@@ -51,17 +51,6 @@ endif
 imap <expr><CR> neosnippet#expandable() <bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)"
 \: pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
 
-"=================
-" lexima settings
-" tomlに書くと何故か動かないので、ここに書いている
-"=================
-
-" 文末以外では無効にする
-call lexima#add_rule({'at': '\%#.*[-0-9a-zA-Z_,:]', 'char': '{', 'input': '{'})
-call lexima#add_rule({'at': '\%#.*[-0-9a-zA-Z_,:]', 'char': '(', 'input': '('})
-call lexima#add_rule({'at': '\%#.*[-0-9a-zA-Z_,:]', 'char': '[', 'input': '['})
-call lexima#add_rule({'at': '\%#.*[-0-9a-zA-Z_,:]', 'char': '"', 'input': '"'})
-
 "======================
 " Vim default settings
 "======================
