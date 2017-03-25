@@ -3,6 +3,10 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+# 閉じ括弧・コロンの自動補完
+repo = 'kana/vim-smartinput'
+
+[[plugins]]
 # 自動補完
 repo = 'Shougo/neocomplcache'
 hook_add = ''' " {{{
@@ -70,10 +74,6 @@ hook_add = ''' " {{{
 [[plugins]]
 # スニペットの定義集
 repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
-# 閉じ括弧・コロンの自動補完
-repo = 'cohama/lexima.vim'
 
 [[plugins]]
 # Vimからブラウザを開く
