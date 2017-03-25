@@ -61,6 +61,7 @@ add-zsh-hook precmd _update_vcs_info_msg
 # alias設定
 
 # よく使うやつ
+alias ls='ls -F'
 alias la='ls -la'
 alias ll='ls -l'
 alias rm='rm -i'
@@ -108,20 +109,6 @@ compinit -C # 起動時間短縮のため、セキュリティチェックをski
 
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-########################################
-# OS 別の設定
-case ${OSTYPE} in
-    darwin*)
-        #Mac用の設定
-        export CLICOLOR=1
-        alias ls='ls -G -F'
-        ;;
-    linux*)
-        #Linux用の設定
-        #alias ls='ls -F --color=auto'
-        ;;
-esac
 
 ###############################################################################
 # 以下は最後に実行
