@@ -11,6 +11,11 @@ ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 cd ~/dotfiles
 git remote set-url origin git@github.com:shun91/dotfiles.git
 
+# ~/.zshrc_localが存在しなければ作成
+if [ ! -e ~/.zshrc_local ]; then
+  touch ~/.zshrc_local
+fi
+
 ### .gitconfig生成（user設定が端末で異なるためgit管理しない） ###
 cat << 'EOS' > ~/.gitconfig
 [core]
