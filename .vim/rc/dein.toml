@@ -73,7 +73,7 @@ repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 # 閉じ括弧・コロンの自動補完
-repo = 'kana/vim-smartinput'
+repo = 'cohama/lexima.vim'
 
 [[plugins]]
 # Vimからブラウザを開く
