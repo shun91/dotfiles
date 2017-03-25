@@ -1,11 +1,11 @@
 #!/bin/sh
 
 ### 各ファイルにsymlinkをはる ###
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.vim ~/.vim
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
+ln -snf ~/dotfiles/.zshrc ~/.zshrc
+ln -snf ~/dotfiles/.vimrc ~/.vimrc
+ln -snf ~/dotfiles/.vim ~/.vim
+ln -snf ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -snf ~/dotfiles/.gitignore_global ~/.gitignore_global
 
 # 可能な場合はremoteリポジトリはssh化しておく（push時にpass等の入力を省略できる）
 cd ~/dotfiles
