@@ -5,7 +5,7 @@ dotfiles
 ```
 $ cd
 $ git clone https://github.com/shun91/dotfiles.git
-$ sh symlink.sh
+$ sh ~/dotfiles/symlink.sh
 ```
 
 ## dotfilesを変更した時
