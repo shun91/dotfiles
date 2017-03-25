@@ -69,11 +69,20 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
 
+# OS別の設定
+case ${OSTYPE} in
+  darwin*) # Mac用の設定
+    # vim（brewでいれたやつ）
+    alias vi='/usr/local/bin/vim'
+    ;;
+  linux*) # Linux用の設定
+    # ファイルタイプ別に色を付ける
+    alias ls='ls -F --color=auto'
+    ;;
+esac
+
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
-
-# viコマンドでbrewでインストールしたvimが起動するように
-alias vi='/usr/local/bin/vim'
 
 # Git Aliases
 alias g='git'
