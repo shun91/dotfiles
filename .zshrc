@@ -29,8 +29,24 @@ setopt hist_ignore_space
 # 高機能なワイルドカード展開を使用する
 setopt extended_glob
 
+# 明確なドットの指定なしで.から始まるファイルをマッチ
+setopt globdots
+
 # ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
 bindkey '^R' history-incremental-pattern-search-backward
+
+# vimにctrl-zで戻る
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
 
 ###############################################################################
 # 見た目の設定
@@ -68,6 +84,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
+alias grep='grep --color' # 色つける
 
 # OS別の設定
 case ${OSTYPE} in
