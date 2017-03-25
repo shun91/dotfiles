@@ -14,6 +14,6 @@ cat << 'EOS' > ~/.gitconfig
   tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
 EOS
 # user設定を促すメッセージを表示する
-echo ‘git user settings!’
+echo '### git user settings! ###'
 echo 'git config --global user.name "user"'
 echo 'git config --global user.email "email"'
