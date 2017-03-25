@@ -44,12 +44,23 @@ endif
 
 "======================
 " neosnippet settings
+" tomlに書くと何故か動かないので、ここに書いている
 "======================
 
 " スニペットが選択されてる場合、Enterキーで展開
-" tomlに書くと何故か動かないので、ここに書いている
 imap <expr><CR> neosnippet#expandable() <bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)"
 \: pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
+
+"=================
+" lexima settings
+" tomlに書くと何故か動かないので、ここに書いている
+"=================
+
+" 文末以外では無効にする
+call lexima#add_rule({'at': '\%#.*[-0-9a-zA-Z_,:]', 'char': '{', 'input': '{'})
+call lexima#add_rule({'at': '\%#.*[-0-9a-zA-Z_,:]', 'char': '(', 'input': '('})
+call lexima#add_rule({'at': '\%#.*[-0-9a-zA-Z_,:]', 'char': '[', 'input': '['})
+call lexima#add_rule({'at': '\%#.*[-0-9a-zA-Z_,:]', 'char': '"', 'input': '"'})
 
 "======================
 " Vim default settings
@@ -142,8 +153,6 @@ endif
 vnoremap > >gv
 vnoremap < <gv
 
-" シンタックスハイライトをon
-syntax enable
 " 行番号表示をon
 set number
 " カーソル位置の右下表示をon
@@ -176,8 +185,6 @@ set cursorline
 set whichwrap+=h,l,<,>,[,],b,s
 " ステータラインを下から2行目に表示
 set laststatus=2
-" 改行時の自動インデントをon
-set smartindent
 " 入力中のコマンドを右下に表示
 set showcmd
 " Insertモード中に<BS>で直前の文字を消せるように
@@ -192,3 +199,9 @@ set colorcolumn=80
 set lazyredraw
 " 高速ターミナル接続を行う(スクロールが重くなる対策)
 set ttyfast
+" マウス操作を有効化
+set mouse=a
+" 改行時の自動インデントをon
+set smartindent
+" シンタックスハイライトをon
+syntax enable
