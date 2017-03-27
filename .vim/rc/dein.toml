@@ -175,33 +175,3 @@ hook_add = ''' " {{{
 [[plugins]]
 # 全てのタブでnerdtreeウインドウを共有
 repo = 'jistr/vim-nerdtree-tabs'
-
-
-[[plugins]]
-# 非同期シンタックスチェック
-repo    = 'osyo-manga/vim-watchdogs'
-depends = [
-  'vim-hier',
-  'quickfixstatus',
-  'shabadou.vim',
-  'vim-quickrun',
-]
-hook_add = '''
-  " :wで保存時にシンタックスチェックを行う(言語ごとに設定)
-  let g:watchdogs_check_BufWritePost_enables = {
-  \   "php" : 1
-  \}
-  " g:quickrun_configにユーザ定義の設定を書き、setupに渡す
-  let g:quickrun_config = {}
-  call watchdogs#setup(g:quickrun_config)
-'''
-# 以下はvim-watchdogsに必要
-[[plugins]]
-repo = 'Shougo/vimproc'
-build = 'make'
-[[plugins]]
-repo = 'jceb/vim-hier'
-[[plugins]]
-repo = 'dannyob/quickfixstatus'
-[[plugins]]
-repo = 'osyo-manga/shabadou.vim'
