@@ -43,15 +43,6 @@ if has('vim_starting') && dein#check_install()
 endif
 
 "======================
-" neosnippet settings
-" tomlに書くと何故か動かないので、ここに書いている
-"======================
-
-" スニペットが選択されてる場合、Enterキーで展開
-imap <expr><CR> neosnippet#expandable() <bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
-
-"======================
 " Vim default settings
 "======================
 
@@ -193,6 +184,6 @@ set mouse=i
 " マウス操作を高機能にする
 set ttymouse=xterm2
 " 改行時の自動インデントをon
-set smartindent
+set cindent
 " シンタックスハイライトをon
 syntax on
