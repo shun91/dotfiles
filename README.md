@@ -7,6 +7,10 @@ $ cd
 $ git clone https://github.com/shun91/dotfiles.git
 $ sh ~/dotfiles/setup.sh
 ```
+また、vimを起動して下記のコマンドを実行し、PHPの辞書を作成する。
+```
+:PhpMakeDict ja
+```
 
 ## dotfilesを変更した時
 ```
