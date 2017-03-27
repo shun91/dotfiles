@@ -188,9 +188,11 @@ set colorcolumn=80
 set lazyredraw
 " 高速ターミナル接続を行う(スクロールが重くなる対策)
 set ttyfast
-" マウス操作を有効化
-set mouse=a
+" insertモードのみマウス操作を有効化（ドラッグ&コピーしづらいので）
+set mouse=i
+" マウス操作を高機能にする
+set ttymouse=xterm2
 " 改行時の自動インデントをon
 set smartindent
 " シンタックスハイライトをon
-syntax enable
+syntax on
