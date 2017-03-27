@@ -177,6 +177,19 @@ repo = 'hail2u/vim-css3-syntax'
 on_ft = ['css', 'less', 'sass']
 
 ########################################
+# PHP
+########################################
+
+[[plugins]]
+# 関数説明のある補完用辞書
+repo = 'violetyk/neocomplete-php.vim'
+on_i = 1
+on_ft = ['php']
+hook_add = '''
+  let g:neocomplete_php_locale = 'ja'
+'''
+
+########################################
 # Javascript
 ########################################
 
