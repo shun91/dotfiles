@@ -24,10 +24,6 @@ hook_add = ''' " {{{
 ''' # }}}
 
 [[plugins]]
-# コメントアウトのトグル
-repo = 'tomtom/tcomment_vim'
-
-[[plugins]]
 # Vim上でプログラムの実行
 repo = 'thinca/vim-quickrun'
 hook_add = ''' " {{{
@@ -47,15 +43,6 @@ hook_add = ''' " {{{
   \       'outputter' : 'browser',
   \   }
   \}
-''' # }}}
-
-[[plugins]]
-# ファイルタイプにあったコメントアウトを挿入
-repo = 'tyru/caw.vim'
-hook_add = ''' " {{{
-  " コメントの追加・削除を行なう
-  nmap <Leader>/ <Plug>(caw:zeropos:toggle)
-  vmap <Leader>/ <Plug>(caw:zeropos:toggle)
 ''' # }}}
 
 [[plugins]]

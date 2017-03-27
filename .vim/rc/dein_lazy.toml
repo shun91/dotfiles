@@ -63,8 +63,8 @@ hook_add = ''' " {{{
   " <TAB>: completion.
   inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
   " <C-h>, <BS>: close popup and delete backword char.
-  inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-  inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+  imap <expr><C-h> neocomplete#smart_close_popup()."\<Plug>(smartinput_C-h)"
+  imap <expr><BS> neocomplete#smart_close_popup()."\<Plug>(smartinput_C-h)"
   " Close popup by <Space>.
   "inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
 
@@ -143,6 +143,20 @@ hook_post_source = ''' " {{{
 repo = 'Shougo/neosnippet-snippets'
 on_i = 1
 
+[[plugins]]
+# コメントアウトのトグル
+repo = 'tomtom/tcomment_vim'
+on_i = 1
+
+[[plugins]]
+# ファイルタイプにあったコメントアウトを挿入
+repo = 'tyru/caw.vim'
+on_i = 1
+hook_add = ''' " {{{
+  " コメントの追加・削除を行なう
+  nmap <Leader>/ <Plug>(caw:zeropos:toggle)
+  vmap <Leader>/ <Plug>(caw:zeropos:toggle)
+''' # }}}
 
 ########################################
 # HTML
@@ -161,6 +175,19 @@ on_ft = ['html']
 # CSS3のシンタックスハイライト
 repo = 'hail2u/vim-css3-syntax'
 on_ft = ['css', 'less', 'sass']
+
+########################################
+# PHP
+########################################
+
+[[plugins]]
+# 関数説明のある補完用辞書
+repo = 'violetyk/neocomplete-php.vim'
+on_i = 1
+on_ft = ['php']
+hook_add = '''
+  let g:neocomplete_php_locale = 'ja'
+'''
 
 ########################################
 # Javascript
