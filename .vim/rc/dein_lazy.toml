@@ -38,6 +38,8 @@ hook_add = ''' " {{{
   " Define dictionary.
   let g:neocomplete#sources#dictionary#dictionaries = {
       \ 'default' : '',
+      " jQueryの辞書（別にプラグイン入れてるので、そこを参照する）
+      \ 'javascript' : $HOME.'/.cache/dein/repos/github.com/ryuzee/vim-jquery-dict/dict/jquery.dict',
       \ 'vimshell' : $HOME.'/.vimshell_hist',
       \ 'scheme' : $HOME.'/.gosh_completions'
           \ }
@@ -196,6 +198,12 @@ hook_add = '''
 [[plugins]]
 # JSのシンタックスハイライト
 repo = 'jelera/vim-javascript-syntax'
+on_ft = ['javascript']
+
+[[plugins]]
+# jQueryの辞書補完
+repo = 'ryuzee/vim-jquery-dict'
+on_i = 1
 on_ft = ['javascript']
 
 ########################################
