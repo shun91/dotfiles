@@ -3,6 +3,11 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+# 非同期実行
+repo  = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
 # Vimからブラウザを開く
 repo = 'tyru/open-browser.vim'
 
