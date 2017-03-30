@@ -85,6 +85,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
 alias grep='grep --color' # 色つける
+alias esl='exec $SHELL -l'
 
 # OS別の設定
 case ${OSTYPE} in
