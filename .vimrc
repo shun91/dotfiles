@@ -131,6 +131,14 @@ if &term =~ "xterm"
     cnoremap <special> <Esc>[201~ <nop>
 endif
 
+" PHPファイル保存時に自動シンタックスチェック
+augroup PHP
+  autocmd!
+  autocmd FileType php set makeprg=php\ -l\ %
+  " php -lの構文チェックでエラーありの場合のみ、エラーが表示される
+  autocmd BufWritePost *.php silent make | if len(getqflist()) != 1 | copen | else | cclose | endif | redraw!
+augroup END
+
 " インデント変更時はvisulal modeから抜けないようにする
 vnoremap > >gv
 vnoremap < <gv
