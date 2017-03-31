@@ -122,6 +122,7 @@ alias gplo='git pull origin'
 alias gps='git push'
 alias gpso='git push origin'
 alias gpsom='git push origin master'
+alias gpsod='git push origin develop'
 alias gss='git status -s'
 
 # ファイル内検索エイリアス
