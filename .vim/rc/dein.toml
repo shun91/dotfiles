@@ -8,10 +8,6 @@ repo  = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-# Vimからブラウザを開く
-repo = 'tyru/open-browser.vim'
-
-[[plugins]]
 # ステータスラインのデコレート
 repo = 'itchyny/lightline.vim'
 
@@ -41,11 +37,6 @@ hook_add = ''' " {{{
   \       'exec' : '%c %s',
   \       'outputter' : 'error',
   \       'outputter/error/success' : 'null'
-  \   },
-  \   "markdown" : {
-  \       'command' : 'PrevimOpen',
-  \       'exec' : '%c',
-  \       'outputter' : 'browser',
   \   }
   \}
 ''' # }}}
