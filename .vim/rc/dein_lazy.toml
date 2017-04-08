@@ -137,10 +137,11 @@ hook_post_source = ''' " {{{
   smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
   \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
+  " jsonのダブルクオーテーションが表示されなくなるので下記はコメントアウト
   " For conceal markers.
-  if has('conceal')
-    set conceallevel=2 concealcursor=niv
-  endif
+  " if has('conceal')
+  "   set conceallevel=2 concealcursor=niv
+  " endif
 
   " 自作 snippet ファイルのパス
   let g:neosnippet#snippets_directory = '~/.vim/snippets/'
