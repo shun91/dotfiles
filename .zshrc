@@ -87,6 +87,12 @@ alias mkdir='mkdir -p'
 alias grep='grep --color' # 色つける
 alias esl='exec $SHELL -l'
 
+# rmはmvのエイリアスとする
+alias rm='rm_to_mv'
+function rm_to_mv() {
+  command mv $1 ~/.Trash/
+}
+
 # OS別の設定
 case ${OSTYPE} in
   darwin*) # Mac用の設定

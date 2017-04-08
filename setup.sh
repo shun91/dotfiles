@@ -16,6 +16,9 @@ if [ ! -e ~/.zshrc_local ]; then
   touch ~/.zshrc_local
 fi
 
+### ゴミ箱ディレクトリ作成 ###
+mkdir -p ~/.Trash
+
 ### .gitconfig生成（user設定が端末で異なるためgit管理しない） ###
 cat << 'EOS' > ~/.gitconfig
 [core]
