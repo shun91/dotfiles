@@ -85,3 +85,17 @@ hook_add = ''' " {{{
 [[plugins]]
 # 全てのタブでnerdtreeウインドウを共有
 repo = 'jistr/vim-nerdtree-tabs'
+
+[[plugins]]
+# ファイルタイプにあったコメントアウトを挿入 (visual modeでも使うのでlazyにしない)
+repo = 'tyru/caw.vim'
+on_i = 1
+hook_add = ''' " {{{
+  " コメントの追加・削除を行なう
+  nmap <Leader>/ <Plug>(caw:zeropos:toggle)
+  vmap <Leader>/ <Plug>(caw:zeropos:toggle)
+''' # }}}
+
+[[plugins]]
+# コメントアウトのトグル (visual modeでも使うのでlazyにしない)
+repo = 'tomtom/tcomment_vim'

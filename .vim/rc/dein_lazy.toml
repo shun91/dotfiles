@@ -156,21 +156,6 @@ hook_post_source = ''' " {{{
 repo = 'Shougo/neosnippet-snippets'
 on_i = 1
 
-[[plugins]]
-# コメントアウトのトグル
-repo = 'tomtom/tcomment_vim'
-on_i = 1
-
-[[plugins]]
-# ファイルタイプにあったコメントアウトを挿入
-repo = 'tyru/caw.vim'
-on_i = 1
-hook_add = ''' " {{{
-  " コメントの追加・削除を行なう
-  nmap <Leader>/ <Plug>(caw:zeropos:toggle)
-  vmap <Leader>/ <Plug>(caw:zeropos:toggle)
-''' # }}}
-
 ########################################
 # HTML
 ########################################
