@@ -27,6 +27,8 @@ cat << 'EOS' > ~/.gitconfig
   tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
 [core]
   excludesfile = ~/.gitignore_global
+[color]
+  ui = true
 EOS
 # gitのuser設定を促すメッセージを表示する
 echo '### git user settings! ###'
