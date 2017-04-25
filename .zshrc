@@ -49,6 +49,12 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
 ###############################################################################
+# plugins
+
+# zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+###############################################################################
 # 見た目の設定
 
 # 色を使用出来るようにする（プロンプトのユーザ名等の色変更に必要）
@@ -77,7 +83,6 @@ $ '
 # alias設定
 
 # よく使うやつ
-alias ls='ls -F'
 alias la='ls -la'
 alias ll='ls -l'
 alias rm='rm -i'
@@ -96,6 +101,8 @@ function rm_to_mv() {
 # OS別の設定
 case ${OSTYPE} in
   darwin*) # Mac用の設定
+    # lsの色設定はMacとLinuxで異なる
+    alias ls='ls -FG'
     # vim（brewでいれたやつ）
     alias vi='/usr/local/bin/vim'
     ;;

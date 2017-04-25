@@ -34,3 +34,7 @@ EOS
 echo '### git user settings! ###'
 echo 'git config --global user.name "user"'
 echo 'git config --global user.email "email"'
+
+### zsh plugins
+# zsh-autosuggestions
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
