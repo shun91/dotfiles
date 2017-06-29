@@ -89,7 +89,7 @@ map <silent> [Tag]n :tabnext<CR>
 map <silent> [Tag]p :tabprevious<CR>
 " tp 前のタブ
 
-" ファイルタイプがhtml,xml,eruby,php,jsの時、閉じタグを自動補完
+" ファイルタイプがhtml,xml,eruby,php,js,vueの時、閉じタグを自動補完
 augroup MyXML
   autocmd!
   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
@@ -97,9 +97,9 @@ augroup MyXML
   autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype php inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype javascript inoremap <buffer> </ </<C-x><C-o>
-
+  autocmd Filetype vue inoremap <buffer> </ </<C-x><C-o>
 augroup END
-autocmd! FileType eruby,html,markdown,xml,php,javascript setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd! FileType eruby,html,markdown,xml,php,javascript,vue setlocal omnifunc=htmlcomplete#CompleteTags
 
 " 行末の空白文字をハイライト
 augroup HighlightTrailingSpaces

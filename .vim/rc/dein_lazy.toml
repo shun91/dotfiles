@@ -200,7 +200,16 @@ on_ft = ['javascript']
 # jQueryの辞書補完
 repo = 'ryuzee/vim-jquery-dict'
 on_i = 1
-on_ft = ['javascript']
+on_ft = ['javascript', 'vue']
+
+########################################
+# vue
+########################################
+
+[[plugins]]
+# vueのシンタックスハイライト
+repo = 'posva/vim-vue'
+on_ft = ['vue']
 
 ########################################
 # Python
