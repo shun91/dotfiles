@@ -3,7 +3,6 @@
 ### 各ファイルにsymlinkをはる ###
 ln -snf ~/dotfiles/.zshrc ~/.zshrc
 ln -snf ~/dotfiles/.vimrc ~/.vimrc
-ln -snf ~/dotfiles/.vim ~/.vim
 ln -snf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -snf ~/dotfiles/.gitignore_global ~/.gitignore_global
 
