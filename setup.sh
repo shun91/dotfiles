@@ -3,7 +3,6 @@
 ### 各ファイルにsymlinkをはる ###
 ln -snf ~/dotfiles/.zshrc ~/.zshrc
 ln -snf ~/dotfiles/.vimrc ~/.vimrc
-ln -snf ~/dotfiles/.vim ~/.vim
 ln -snf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -snf ~/dotfiles/.gitignore_global ~/.gitignore_global
 
@@ -34,6 +33,10 @@ EOS
 echo '### git user settings! ###'
 echo 'git config --global user.name "user"'
 echo 'git config --global user.email "email"'
+
+### vscodeの設定ファイルをシンボリックリンク
+\rm -rf ~/Library/Application\ Support/Code/User
+ln -s ~/dotfiles/vscode/User ~/Library/Application\ Support/Code/User
 
 ### zsh plugins
 # zsh-autosuggestions
