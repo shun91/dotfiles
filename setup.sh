@@ -34,6 +34,10 @@ echo '### git user settings! ###'
 echo 'git config --global user.name "user"'
 echo 'git config --global user.email "email"'
 
+### vscodeの設定ファイルをシンボリックリンク
+\rm -rf ~/Library/Application\ Support/Code/User
+ln -s ~/dotfiles/vscode/User ~/Library/Application\ Support/Code/User
+
 ### zsh plugins
 # zsh-autosuggestions
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
