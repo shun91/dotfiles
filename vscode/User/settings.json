@@ -1,7 +1,24 @@
 // 既定の設定を上書きするには、このファイル内に設定を挿入します
 {
-    "editor.rulers": [
-        80
-    ],
-    "git.enableSmartCommit": true
+  // 垂直ルーラーを表示する列
+  "editor.rulers": [80],
+  
+  // ステージされた変更がない場合はすべての変更をコミットします。
+  "git.enableSmartCommit": true,
+  
+  // エディターで空白文字を表示する方法を制御します。'none'、'boundary' および 'all' が使用可能です。'boundary' オプションでは、単語間の単一スペースは表示されません。
+  "editor.renderWhitespace": "all",
+
+  // 1 つのタブに相当するスペースの数。`editor.detectIndentation` がオンの場合、この設定はファイル コンテンツに基づいて上書きされます。
+  "editor.tabSize": 2,
+
+  // [php] 言語に対して上書きされるエディター設定を構成します。
+  "[php]":  {
+    "editor.tabSize": 4
+  },
+
+  // [python] 言語に対して上書きされるエディター設定を構成します。
+  "[python]":  {
+    "editor.tabSize": 4
+  }
 }

@@ -4,6 +4,14 @@
 # PATH
 PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:/Users/kawahara/bin:$PATH"
 
+# Macの場合のみ、php7.1にパスを通す
+# 予め `brew install homebrew/php/php71` をしておくこと！
+case ${OSTYPE} in
+  darwin*) # Mac用の設定
+    PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+    ;;
+esac
+
 # 言語設定
 export LC_CTYPE=ja_JP.UTF-8
 export LANG=ja_JP.UTF-8
