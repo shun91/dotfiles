@@ -20,5 +20,6 @@
   // [python] 言語に対して上書きされるエディター設定を構成します。
   "[python]":  {
     "editor.tabSize": 4
-  }
+  },
+  "workbench.colorTheme": "Monokai"
 }
