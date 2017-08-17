@@ -29,5 +29,7 @@
     "editor.tabSize": 4
   },
   "workbench.colorTheme": "Monokai",
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "window.zoomLevel": 0
 }
