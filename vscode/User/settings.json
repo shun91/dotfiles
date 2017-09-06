@@ -31,5 +31,11 @@
   "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+
+  // 現在選択している配色テーマで配色を上書きします。
+  "workbench.colorCustomizations": {
+    "editor.findMatchBackground": "#ffff00",
+    "editor.findMatchHighlightBackground": "#ffff0088"
+  }
 }
