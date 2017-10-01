@@ -12,6 +12,9 @@ case ${OSTYPE} in
     ;;
 esac
 
+# Add Visual Studio Code (code)
+PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # 言語設定
 export LC_CTYPE=ja_JP.UTF-8
 export LANG=ja_JP.UTF-8
