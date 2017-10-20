@@ -2,7 +2,7 @@
 # 雑多な設定
 
 # PATH
-PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:/Users/kawahara/bin:$PATH"
+PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:$PATH"
 
 # Macの場合のみ、php7.1にパスを通す
 # 予め `brew install homebrew/php/php71` をしておくこと！
