@@ -65,8 +65,7 @@ bindkey '^Z' fancy-ctrl-z
 # zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ###############################################################################
 # 見た目の設定
 

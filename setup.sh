@@ -41,3 +41,5 @@ ln -s ~/dotfiles/vscode/User ~/Library/Application\ Support/Code/User
 ### zsh plugins
 # zsh-autosuggestions
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+# zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
