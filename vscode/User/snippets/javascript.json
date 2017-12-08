@@ -8,8 +8,7 @@
 	"Print to console": {
 		"prefix": "log",
 		"body": [
-			"console.log('$1');",
-			"$2"
+			"console.log('$1');$2"
 		],
 		"description": "Log output to console"
 	}
@@ -18,8 +17,7 @@
 	"Print to console": {
 		"prefix": "console.log()",
 		"body": [
-			"console.log($1);",
-			"$2"
+			"console.log($1);$2"
 		],
 		"description": "Log output to console"
 	}
