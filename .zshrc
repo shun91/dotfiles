@@ -149,6 +149,12 @@ alias gpso='git push origin'
 alias gpsom='git push origin master'
 alias gpsod='git push origin develop'
 alias gss='git status -s'
+alias gst='git stash'
+alias gsts='git stash save'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+alias gstd='git stash drop'
+alias gstc='git stash clear'
 
 # ファイル内検索エイリアス
 alias fgrep='find ./ -type f -print | xargs grep'
