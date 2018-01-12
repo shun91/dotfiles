@@ -135,7 +135,7 @@ alias gb='git branch'
 alias gbd='git branch -d '
 # マージ済みブランチ一括削除
 # https://qiita.com/hajimeni/items/73d2155fc59e152630c4
-alias gbdm='git branch --merged | egrep -v 'master|develop|dev' | xargs git branch -d'
+alias gbdm='git branch --merged | egrep -v "master|develop|dev" | xargs git branch -d'
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gco='git checkout'
