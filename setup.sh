@@ -28,6 +28,8 @@ cat << 'EOS' > ~/.gitconfig
   excludesfile = ~/.gitignore_global
 [color]
   ui = true
+[fetch]
+  prune = true
 EOS
 # gitのuser設定を促すメッセージを表示する
 echo '### git user settings! ###'
