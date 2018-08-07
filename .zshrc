@@ -8,7 +8,7 @@ PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:$PATH"
 # 予め `brew install homebrew/php/php71` をしておくこと！
 case ${OSTYPE} in
   darwin*) # Mac用の設定
-    PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+    PATH="$(brew --prefix homebrew/core/php@7.1)/bin:$PATH"
     ;;
 esac
 
