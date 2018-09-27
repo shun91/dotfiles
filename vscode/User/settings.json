@@ -61,5 +61,11 @@
     ".envrc": "dotenv"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.rendererType": "dom",
+  "window.restoreWindows": "all",
+  "window.newWindowDimensions": "inherit",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false
 }
