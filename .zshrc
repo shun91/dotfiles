@@ -158,6 +158,8 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias gstc='git stash clear'
+alias gcp='git cherry-pick'
+alias gr='git rebase -i'
 
 # ファイル内検索エイリアス
 alias fgrep='find ./ -type f -print | xargs grep'
