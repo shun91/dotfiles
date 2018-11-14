@@ -2,19 +2,19 @@
 {
   // 垂直ルーラーを表示する列
   "editor.rulers": [80],
-  
+
   // ステージされた変更がない場合はすべての変更をコミットします。
   "git.enableSmartCommit": true,
-  
+
   // エディターで空白文字を表示する方法を制御します。'none'、'boundary' および 'all' が使用可能です。'boundary' オプションでは、単語間の単一スペースは表示されません。
   "editor.renderWhitespace": "all",
 
   // 1 つのタブに相当するスペースの数。`editor.detectIndentation` がオンの場合、この設定はファイル コンテンツに基づいて上書きされます。
   "editor.tabSize": 2,
-  
+
   // エディターで入力後に自動的に行の書式設定を行うかどうかを制御します
   // https://devadjust.exblog.jp/23791887/
-  "editor.formatOnType": true,
+  "editor.formatOnType": false,
 
   // eslintによる監視が実行される拡張子
   "eslint.validate": [
@@ -24,12 +24,12 @@
   ],
 
   // [php] 言語に対して上書きされるエディター設定を構成します。
-  "[php]":  {
+  "[php]": {
     "editor.tabSize": 4
   },
 
   // [python] 言語に対して上書きされるエディター設定を構成します。
-  "[python]":  {
+  "[python]": {
     "editor.tabSize": 4
   },
   "workbench.colorTheme": "Monokai",
@@ -56,6 +56,10 @@
 
   // Use 'prettier-eslint' instead of 'prettier'. Other settings will only be fallbacks in case they could not be inferred from eslint rules.
   "prettier.eslintIntegration": true,
+
+  // A list of languages IDs to disable this extension on
+  "prettier.disableLanguages": ["vue", "markdown"],
+
   "workbench.statusBar.feedback.visible": false,
   "files.associations": {
     ".envrc": "dotenv"
@@ -70,5 +74,7 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "editor.minimap.enabled": false,
   "editor.renderControlCharacters": true,
-  "breadcrumbs.enabled": true
+  "breadcrumbs.enabled": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
 }
