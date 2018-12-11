@@ -82,5 +82,6 @@
   "beautify.ignore": [
     "**/*.js"
   ],
-  "tslint.ignoreDefinitionFiles": false
+  "tslint.ignoreDefinitionFiles": false,
+  "tslint.exclude": "**/node_modules/**"
 }
