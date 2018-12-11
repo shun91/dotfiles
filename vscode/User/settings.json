@@ -75,9 +75,12 @@
   "editor.minimap.enabled": false,
   "editor.renderControlCharacters": true,
   "breadcrumbs.enabled": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
 
   // List of paths to ignore when using VS Code format command, including format on save. Uses glob pattern matching.
-  "beautify.ignore": ["**/*.js"]
+  "beautify.ignore": [
+    "**/*.js"
+  ],
+  "tslint.ignoreDefinitionFiles": false
 }
