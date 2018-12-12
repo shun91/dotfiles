@@ -83,5 +83,5 @@
     "**/*.js"
   ],
   "tslint.ignoreDefinitionFiles": false,
-  "tslint.exclude": "**/node_modules/**"
+  "tslint.exclude": ["**/node_modules/**", "**/*.vue"]
 }
