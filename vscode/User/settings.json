@@ -58,7 +58,7 @@
   "prettier.eslintIntegration": true,
 
   // A list of languages IDs to disable this extension on
-  "prettier.disableLanguages": ["vue", "markdown"],
+  "prettier.disableLanguages": ["markdown"],
 
   "workbench.statusBar.feedback.visible": false,
   "files.associations": {
@@ -83,5 +83,7 @@
     "**/*.js"
   ],
   "tslint.ignoreDefinitionFiles": false,
-  "tslint.exclude": ["**/node_modules/**", "**/*.vue"]
+  "tslint.exclude": [
+    "**/node_modules/**"
+  ]
 }
