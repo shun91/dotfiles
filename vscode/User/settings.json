@@ -57,16 +57,13 @@
   // Use 'prettier-eslint' instead of 'prettier'. Other settings will only be fallbacks in case they could not be inferred from eslint rules.
   "prettier.eslintIntegration": true,
 
-  // A list of languages IDs to disable this extension on
-  "prettier.disableLanguages": ["markdown"],
-
   "workbench.statusBar.feedback.visible": false,
   "files.associations": {
-    ".envrc": "dotenv"
+    ".envrc": "dotenv",
+    "Dangerfile": "ruby"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vsicons.dontShowNewVersionMessage": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "terminal.integrated.rendererType": "dom",
   "window.restoreWindows": "all",
   "window.newWindowDimensions": "inherit",
@@ -78,12 +75,25 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": false,
 
-  // List of paths to ignore when using VS Code format command, including format on save. Uses glob pattern matching.
-  "beautify.ignore": [
-    "**/*.js"
-  ],
   "tslint.ignoreDefinitionFiles": false,
   "tslint.exclude": [
     "**/node_modules/**"
-  ]
+  ],
+
+  // A list of vscode language names where the extension should be used.
+  "css_peek.activeLanguages": [
+    "html",
+    "ejs",
+    "erb",
+    "php",
+    "javascriptreact",
+    "typescriptreact",
+    "typescript",
+    "javascript",
+    "vue"
+  ],
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "markdown.extension.toc.updateOnSave": false
 }
