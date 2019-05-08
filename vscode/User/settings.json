@@ -33,7 +33,6 @@
     "editor.tabSize": 4
   },
   "workbench.colorTheme": "Monokai",
-  "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
   "window.zoomLevel": 0,
 
@@ -63,7 +62,6 @@
     "Dangerfile": "ruby"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "vsicons.dontShowNewVersionMessage": true,
   "terminal.integrated.rendererType": "dom",
   "window.restoreWindows": "all",
   "window.newWindowDimensions": "inherit",
@@ -95,5 +93,11 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.codeLens.authors.enabled": false,
-  "markdown.extension.toc.updateOnSave": false
+  "markdown.extension.toc.updateOnSave": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "editor.fontFamily": "'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13
 }
