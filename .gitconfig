@@ -1,0 +1,17 @@
+[core]
+  editor = vim
+[alias]
+  tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
+[core]
+  excludesfile = ~/.gitignore_global
+[color]
+  ui = true
+[user]
+  name = shun91
+  email = shun9167@gmail.com
+[fetch]
+  prune = true
+
+# ~/git/ghe/ 以下では git のユーザー情報を切り替える
+[includeIf "gitdir:~/git/ghe/"]
+  path = ~/.gitconfig_ghe

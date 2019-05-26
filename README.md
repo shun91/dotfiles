@@ -8,6 +8,8 @@ $ git clone https://github.com/shun91/dotfiles.git
 $ sh ~/dotfiles/setup.sh
 ```
 
+必要に応じて `~/.gitconfig_ghe` も作成する。
+
 ## dotfilesを変更した時
 ```
 $ cd ~/dotfiles

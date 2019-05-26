@@ -5,6 +5,7 @@ ln -snf ~/dotfiles/.zshrc ~/.zshrc
 ln -snf ~/dotfiles/.vimrc ~/.vimrc
 ln -snf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -snf ~/dotfiles/.gitignore_global ~/.gitignore_global
+ln -snf ~/dotfiles/.gitconfig ~/.gitconfig
 
 # 可能な場合はremoteリポジトリはssh化しておく（push時にpass等の入力を省略できる）
 cd ~/dotfiles
@@ -17,24 +18,6 @@ fi
 
 ### ゴミ箱ディレクトリ作成 ###
 mkdir -p ~/.Trash
-
-### .gitconfig生成（user設定が端末で異なるためgit管理しない） ###
-cat << 'EOS' > ~/.gitconfig
-[core]
-  editor = vim
-[alias]
-  tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
-[core]
-  excludesfile = ~/.gitignore_global
-[color]
-  ui = true
-[fetch]
-  prune = true
-EOS
-# gitのuser設定を促すメッセージを表示する
-echo '### git user settings! ###'
-echo 'git config --global user.name "user"'
-echo 'git config --global user.email "email"'
 
 ### vscodeの設定ファイルをシンボリックリンク
 \rm -rf ~/Library/Application\ Support/Code/User
