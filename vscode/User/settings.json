@@ -73,11 +73,6 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": false,
 
-  "tslint.ignoreDefinitionFiles": false,
-  "tslint.exclude": [
-    "**/node_modules/**"
-  ],
-
   // A list of vscode language names where the extension should be used.
   "css_peek.activeLanguages": [
     "html",
@@ -99,5 +94,10 @@
   },
   "workbench.iconTheme": "vscode-icons",
   "editor.fontFamily": "'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 13
+  "editor.fontSize": 13,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
