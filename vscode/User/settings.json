@@ -32,15 +32,10 @@
   "[python]": {
     "editor.tabSize": 4
   },
-  "workbench.colorTheme": "Monokai",
+
   "workbench.startupEditor": "newUntitledFile",
   "window.zoomLevel": 0,
 
-  // 現在選択している配色テーマで配色を上書きします。
-  "workbench.colorCustomizations": {
-    "editor.findMatchBackground": "#ffff00",
-    "editor.findMatchHighlightBackground": "#ffff0088"
-  },
   "diffEditor.ignoreTrimWhitespace": true,
 
   // If true, will use single instead of double quotes
@@ -56,7 +51,6 @@
   // Use 'prettier-eslint' instead of 'prettier'. Other settings will only be fallbacks in case they could not be inferred from eslint rules.
   "prettier.eslintIntegration": true,
 
-  "workbench.statusBar.feedback.visible": false,
   "files.associations": {
     ".envrc": "dotenv",
     "Dangerfile": "ruby"
@@ -70,21 +64,9 @@
   "editor.minimap.enabled": false,
   "editor.renderControlCharacters": true,
   "breadcrumbs.enabled": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
 
-  // A list of vscode language names where the extension should be used.
-  "css_peek.activeLanguages": [
-    "html",
-    "ejs",
-    "erb",
-    "php",
-    "javascriptreact",
-    "typescriptreact",
-    "typescript",
-    "javascript",
-    "vue"
-  ],
   "gitlens.currentLine.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.codeLens.authors.enabled": false,
@@ -92,12 +74,37 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.iconTheme": "vscode-icons",
   "editor.fontFamily": "'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 13,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.iconTheme": "vscode-icons",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vetur.format.defaultFormatter.html": "prettier",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "vsicons.dontShowNewVersionMessage": true,
+
+  "vetur.experimental.templateInterpolationService": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative"
 }
