@@ -1,45 +1,36 @@
 // 既定の設定を上書きするには、このファイル内に設定を挿入します
 {
   // 垂直ルーラーを表示する列
-  "editor.rulers": [80],
-
+  "editor.rulers": [
+    80
+  ],
   // ステージされた変更がない場合はすべての変更をコミットします。
   "git.enableSmartCommit": true,
-
   // エディターで空白文字を表示する方法を制御します。'none'、'boundary' および 'all' が使用可能です。'boundary' オプションでは、単語間の単一スペースは表示されません。
   "editor.renderWhitespace": "all",
-
   // 1 つのタブに相当するスペースの数。`editor.detectIndentation` がオンの場合、この設定はファイル コンテンツに基づいて上書きされます。
   "editor.tabSize": 2,
-
   // エディターで入力後に自動的に行の書式設定を行うかどうかを制御します
   // https://devadjust.exblog.jp/23791887/
   "editor.formatOnType": false,
-
   // eslintによる監視が実行される拡張子
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "vue"
   ],
-
   "eslint.autoFixOnSave": true,
-
   // [php] 言語に対して上書きされるエディター設定を構成します。
   "[php]": {
     "editor.tabSize": 4
   },
-
   // [python] 言語に対して上書きされるエディター設定を構成します。
   "[python]": {
     "editor.tabSize": 4
   },
-
   "workbench.startupEditor": "newUntitledFile",
   "window.zoomLevel": 0,
-
   "diffEditor.ignoreTrimWhitespace": true,
-
   "files.associations": {
     ".envrc": "dotenv",
     "Dangerfile": "ruby"
@@ -55,7 +46,6 @@
   "breadcrumbs.enabled": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-
   "gitlens.currentLine.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.codeLens.authors.enabled": false,
@@ -71,12 +61,6 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.iconTheme": "vscode-icons",
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -92,7 +76,6 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "vsicons.dontShowNewVersionMessage": true,
-
   "vetur.experimental.templateInterpolationService": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifier": "non-relative",
