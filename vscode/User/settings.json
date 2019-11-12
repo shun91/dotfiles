@@ -23,6 +23,8 @@
     "vue"
   ],
 
+  "eslint.autoFixOnSave": true,
+
   // [php] 言語に対して上書きされるエディター設定を構成します。
   "[php]": {
     "editor.tabSize": 4
@@ -37,19 +39,6 @@
   "window.zoomLevel": 0,
 
   "diffEditor.ignoreTrimWhitespace": true,
-
-  // If true, will use single instead of double quotes
-  "prettier.singleQuote": true,
-
-  // Controls the printing of trailing commas wherever possible.
-  //  Valid options:
-  //     'none' - No trailing commas
-  //     'es5' - Trailing commas where valid in ES5 (objects, arrays, etc)
-  //     'all' - Trailing commas wherever possible (function arguments)
-  "prettier.trailingComma": "all",
-
-  // Use 'prettier-eslint' instead of 'prettier'. Other settings will only be fallbacks in case they could not be inferred from eslint rules.
-  "prettier.eslintIntegration": true,
 
   "files.associations": {
     ".envrc": "dotenv",
@@ -106,5 +95,6 @@
 
   "vetur.experimental.templateInterpolationService": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
-  "javascript.preferences.importModuleSpecifier": "non-relative"
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh"
 }
