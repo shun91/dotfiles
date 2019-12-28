@@ -12,7 +12,7 @@
   "editor.tabSize": 2,
   // エディターで入力後に自動的に行の書式設定を行うかどうかを制御します
   // https://devadjust.exblog.jp/23791887/
-  "editor.formatOnType": false,
+  "editor.formatOnType": true,
   // eslintによる監視が実行される拡張子
   "eslint.validate": [
     "javascript",
@@ -79,5 +79,30 @@
   "vetur.experimental.templateInterpolationService": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifier": "non-relative",
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh"
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "vetur.useWorkspaceDependencies": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // デフォルト設定から typescript のみ除外
+  // https://github.com/formulahendry/vscode-auto-close-tag/issues/17
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    // "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (Eex)"
+  ]
 }
