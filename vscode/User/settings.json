@@ -19,7 +19,6 @@
     "javascriptreact",
     "vue"
   ],
-  "eslint.autoFixOnSave": true,
   // [php] 言語に対して上書きされるエディター設定を構成します。
   "[php]": {
     "editor.tabSize": 4
