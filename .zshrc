@@ -4,14 +4,6 @@
 # PATH
 PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:$PATH"
 
-# Macの場合のみ、php7.1にパスを通す
-# 予め `brew install homebrew/php/php71` をしておくこと！
-case ${OSTYPE} in
-  darwin*) # Mac用の設定
-    PATH="$(brew --prefix homebrew/core/php@7.1)/bin:$PATH"
-    ;;
-esac
-
 # Add Visual Studio Code (code)
 PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
