@@ -29,7 +29,6 @@
   },
   "workbench.startupEditor": "newUntitledFile",
   "window.zoomLevel": 0,
-  "diffEditor.ignoreTrimWhitespace": false,
   "files.associations": {
     ".envrc": "dotenv",
     "Dangerfile": "ruby"
@@ -103,5 +102,6 @@
     "lang-cfml",
     "cfml",
     "HTML (Eex)"
-  ]
+  ],
+  "pasteImage.path": "${currentFileDir}/images"
 }
