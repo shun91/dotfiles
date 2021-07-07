@@ -5,6 +5,7 @@ dotfiles
 
 - いわゆる dotfiles
 - VSCode の設定 (拡張機能は含めない)
+- iTerm2 の設定 ([参考](https://qiita.com/reoring/items/a0f3d6186efd11c87f1b))
 
 ## インストール
 ```
