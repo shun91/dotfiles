@@ -6,8 +6,6 @@
   ],
   // ステージされた変更がない場合はすべての変更をコミットします。
   "git.enableSmartCommit": true,
-  // エディターで空白文字を表示する方法を制御します。'none'、'boundary' および 'all' が使用可能です。'boundary' オプションでは、単語間の単一スペースは表示されません。
-  "editor.renderWhitespace": "all",
   // 1 つのタブに相当するスペースの数。`editor.detectIndentation` がオンの場合、この設定はファイル コンテンツに基づいて上書きされます。
   "editor.tabSize": 2,
   // エディターで入力後に自動的に行の書式設定を行うかどうかを制御します
@@ -74,7 +72,6 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "vsicons.dontShowNewVersionMessage": true,
-  "vetur.experimental.templateInterpolationService": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
@@ -103,5 +100,15 @@
     "cfml",
     "HTML (Eex)"
   ],
-  "pasteImage.path": "${currentFileDir}/images"
+  "pasteImage.path": "${currentFileDir}/images",
+  "vetur.experimental.templateInterpolationService": true,
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "workbench.colorTheme": "Solarized Dark",
+  "editor.renderWhitespace": "trailing",
+  "editor.renderIndentGuides": false,
+  "gitlens.views.repositories.enabled": true,
+  "gitlens.views.branches.branches.layout": "list",
+  "editor.inlineSuggest.enabled": true
 }
