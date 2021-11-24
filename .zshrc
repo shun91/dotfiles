@@ -177,4 +177,3 @@ export PATH
 
 # cmd + shift + ; で拡大するために必要
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
