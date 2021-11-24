@@ -49,8 +49,7 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontFamily": "'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 13,
+  "editor.fontSize": 12,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -111,5 +110,13 @@
   "gitlens.views.repositories.enabled": true,
   "gitlens.views.branches.branches.layout": "list",
   "editor.inlineSuggest.enabled": true,
-  "terminal.integrated.shell.osx": "/bin/zsh"
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "security.workspace.trust.untrustedFiles": "open",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace, 'Ricty Diminished'"
 }
