@@ -4,8 +4,8 @@ dotfiles
 ## 管理しているもの
 
 - いわゆる dotfiles
+- iTerm2 の設定
 - VSCode の設定 (拡張機能は含めない)
-- iTerm2 の設定 ([参考](https://qiita.com/reoring/items/a0f3d6186efd11c87f1b))
 
 ## インストール
 ```
@@ -13,6 +13,11 @@ cd
 git clone https://github.com/shun91/dotfiles.git
 sh ~/dotfiles/setup.sh
 ```
+
+iTerm２の設定は以下を参考に実施する。  
+https://qiita.com/reoring/items/a0f3d6186efd11c87f1b
+
+VSCodeの設定はsetup.shで実施されるので追加作業は不要。
 
 必要に応じて `~/.gitconfig_ghe` も作成する。
 
