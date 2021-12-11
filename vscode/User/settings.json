@@ -56,6 +56,9 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.iconTheme": "vscode-icons",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -118,5 +121,6 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace, 'Ricty Diminished'"
+  "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace, 'Ricty Diminished'",
+  "git.confirmSync": false
 }
