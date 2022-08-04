@@ -26,7 +26,6 @@
     "Dangerfile": "ruby"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.rendererType": "dom",
   "window.restoreWindows": "all",
   "window.newWindowDimensions": "inherit",
   "workbench.editor.enablePreview": false,
@@ -61,7 +60,6 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "vetur.format.defaultFormatter.html": "prettier",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -70,8 +68,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifier": "non-relative",
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-  "vetur.useWorkspaceDependencies": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -97,16 +93,13 @@
     "HTML (Eex)"
   ],
   "pasteImage.path": "${currentFileDir}/images",
-  "vetur.experimental.templateInterpolationService": true,
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
   },
   "workbench.colorTheme": "Solarized Dark",
   "editor.renderWhitespace": "trailing",
-  "gitlens.views.repositories.enabled": true,
   "gitlens.views.branches.branches.layout": "list",
   "editor.inlineSuggest.enabled": true,
-  "terminal.integrated.shell.osx": "/bin/zsh",
   "security.workspace.trust.untrustedFiles": "open",
   "files.exclude": {
     "**/.classpath": true,
@@ -118,7 +111,6 @@
   "git.confirmSync": false,
   "editor.guides.indentation": false,
   "git.autofetch": true,
-  "npm.keybindingsChangedWarningShown": true,
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/skawahar/.vscode/extensions/vscjava.vscode-lombok-1.0.1/server/lombok.jar\"",
   "redhat.telemetry.enabled": false,
   "editor.fontSize": 11.5,
