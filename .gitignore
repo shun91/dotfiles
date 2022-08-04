@@ -1,1 +1,4 @@
 .DS_Store
+vscode/User/History
+vscode/User/globalStorage
+vscode/User/workspaceStorage

@@ -15,3 +15,5 @@
 # ~/git/ghe/ 以下では git のユーザー情報を切り替える
 [includeIf "gitdir:~/git/ghe/"]
   path = ~/.gitconfig_ghe
+[init]
+	defaultBranch = main
