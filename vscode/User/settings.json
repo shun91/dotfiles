@@ -1,9 +1,7 @@
 // 既定の設定を上書きするには、このファイル内に設定を挿入します
 {
   // 垂直ルーラーを表示する列
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   // ステージされた変更がない場合はすべての変更をコミットします。
   "git.enableSmartCommit": true,
   // 1 つのタブに相当するスペースの数。`editor.detectIndentation` がオンの場合、この設定はファイル コンテンツに基づいて上書きされます。
@@ -12,11 +10,7 @@
   // https://devadjust.exblog.jp/23791887/
   "editor.formatOnType": true,
   // eslintによる監視が実行される拡張子
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "vue"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "vue"],
   // [php] 言語に対して上書きされるエディター設定を構成します。
   "[php]": {
     "editor.tabSize": 4
@@ -49,7 +43,6 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontSize": 12,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -72,6 +65,7 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "stylelint.validate": ["css", "less", "postcss", "scss", "vue"],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "vsicons.dontShowNewVersionMessage": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
@@ -105,11 +99,10 @@
   "pasteImage.path": "${currentFileDir}/images",
   "vetur.experimental.templateInterpolationService": true,
   "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
+    "editor.defaultFormatter": "Vue.volar"
   },
   "workbench.colorTheme": "Solarized Dark",
   "editor.renderWhitespace": "trailing",
-  "editor.renderIndentGuides": false,
   "gitlens.views.repositories.enabled": true,
   "gitlens.views.branches.branches.layout": "list",
   "editor.inlineSuggest.enabled": true,
@@ -122,5 +115,15 @@
     "**/.factorypath": true
   },
   "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace, 'Ricty Diminished'",
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "editor.guides.indentation": false,
+  "git.autofetch": true,
+  "npm.keybindingsChangedWarningShown": true,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/skawahar/.vscode/extensions/vscjava.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "redhat.telemetry.enabled": false,
+  "editor.fontSize": 11.5,
+  "terminal.integrated.fontSize": 10,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
