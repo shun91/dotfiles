@@ -10,7 +10,14 @@
   // https://devadjust.exblog.jp/23791887/
   "editor.formatOnType": true,
   // eslintによる監視が実行される拡張子
-  "eslint.validate": ["javascript", "javascriptreact", "vue"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "mdx"
+  ],
   // [php] 言語に対して上書きされるエディター設定を構成します。
   "[php]": {
     "editor.tabSize": 4
@@ -63,6 +70,9 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue"],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "vsicons.dontShowNewVersionMessage": true,
@@ -90,7 +100,8 @@
     "erb",
     "lang-cfml",
     "cfml",
-    "HTML (Eex)"
+    "HTML (Eex)",
+    "mdx"
   ],
   "pasteImage.path": "${currentFileDir}/images",
   "[vue]": {
@@ -116,6 +127,12 @@
   "editor.fontSize": 11.5,
   "terminal.integrated.fontSize": 10,
   "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
