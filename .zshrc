@@ -132,7 +132,7 @@ alias gc='git commit'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gcob='git checkout -b'
-alias gcom='git checkout master'
+alias gcom='git checkout main || git checkout master'
 alias gcod='git checkout develop'
 alias gd='git diff'
 alias gl='git log'
@@ -177,3 +177,10 @@ export PATH
 
 # cmd + shift + ; で拡大するために必要
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/skawahar/.sdkman"
+[[ -s "/Users/skawahar/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/skawahar/.sdkman/bin/sdkman-init.sh"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
