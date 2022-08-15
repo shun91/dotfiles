@@ -105,7 +105,7 @@
   ],
   "pasteImage.path": "${currentFileDir}/images",
   "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.colorTheme": "Solarized Dark",
   "editor.renderWhitespace": "trailing",
