@@ -127,7 +127,10 @@ alias gb='git branch'
 alias gbd='git branch -d '
 # マージ済みブランチ一括削除
 # https://qiita.com/hajimeni/items/73d2155fc59e152630c4
-alias gbdm='git branch --merged | egrep -v "master|develop|dev" | xargs git branch -d'
+alias gbdm='git delete-merged-branch'
+# Squash mergeされたブランチ一括削除
+# https://github.com/not-an-aardvark/git-delete-squashed#sh
+alias gbdms='TARGET_BRANCH=main && git checkout -q $TARGET_BRANCH && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base $TARGET_BRANCH $branch) && [[ $(git cherry $TARGET_BRANCH $(git commit-tree $(git rev-parse $branch\^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gco='git checkout'
