@@ -24,10 +24,10 @@
   },
   // [python] 言語に対して上書きされるエディター設定を構成します。
   "[python]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
   },
   "workbench.startupEditor": "newUntitledFile",
-  "window.zoomLevel": 0,
   "files.associations": {
     ".envrc": "dotenv",
     "Dangerfile": "ruby"
@@ -79,7 +79,7 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   // デフォルト設定から typescript のみ除外
   // https://github.com/formulahendry/vscode-auto-close-tag/issues/17
@@ -134,5 +134,19 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "boot-java.rewrite.reconcile": true,
+  "java.format.settings.profile": "GoogleStyle",
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "vite.autoStart": false,
+  "markdown.marp.enableHtml": true,
+  "editor.indentSize": "tabSize",
+
+  // index.tsなどはディレクトリ名も表示する
+  // https://zenn.dev/bmth/articles/vscode-tab-display-name-alias
+  "workbench.editor.customLabels.patterns": {
+    "**/index.{js,ts,jsx,tsx,md,mdx}": "${dirname}/${filename}.${extname}"
   }
 }
