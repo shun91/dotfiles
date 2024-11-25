@@ -148,5 +148,7 @@
   // https://zenn.dev/bmth/articles/vscode-tab-display-name-alias
   "workbench.editor.customLabels.patterns": {
     "**/index.{js,ts,jsx,tsx,md,mdx}": "${dirname}/${filename}.${extname}"
-  }
+  },
+
+  "editor.gotoLocation.multipleDefinitions": "goto"
 }
