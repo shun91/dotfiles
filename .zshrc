@@ -1,3 +1,6 @@
+# プロファイル計測時にコメントアウトを外す
+# zmodload zsh/zprof
+
 ###############################################################################
 # 雑多な設定
 
@@ -171,6 +174,11 @@ compinit -C # 起動時間短縮のため、セキュリティチェックをski
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 ###############################################################################
+
+# cmd + shift + ; で拡大するために必要
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+###############################################################################
 # 以下は最後に実行
 
 # PC毎のzshrcの読込
@@ -179,5 +187,5 @@ source ~/.zshrc_local
 # 最後にパスを通す
 export PATH
 
-# cmd + shift + ; で拡大するために必要
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# プロファイル計測時にコメントアウトを外す
+# zprof
