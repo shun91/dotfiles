@@ -141,7 +141,6 @@
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "github.copilot.editor.enableAutoCompletions": true,
   "vite.autoStart": false,
-  "markdown.marp.enableHtml": true,
   "editor.indentSize": "tabSize",
 
   // index.tsなどはディレクトリ名も表示する
@@ -150,5 +149,25 @@
     "**/index.{js,ts,jsx,tsx,md,mdx}": "${dirname}/${filename}.${extname}"
   },
 
-  "editor.gotoLocation.multipleDefinitions": "goto"
+  "editor.gotoLocation.multipleDefinitions": "goto",
+
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    { "text": "必ず日本語で記述してください。" },
+    {
+      "text": "必ずConventional Commitsのルールを守ってください。特に、screwdriver.yamlの設定変更は `ci` としてください。"
+    },
+    {
+      "text": "最初に「何をしたのか」の要約を記述、その後にファイルごとの詳細な変更内容を記述してください。"
+    },
+    {
+      "text": "「なぜこの変更をしたのか」の理由を推測して記述することは避けてください。"
+    }
+  ],
+  "vue.server.hybridMode": true,
+
+  "markdown.marp.html": "all",
+  "git.openRepositoryInParentFolders": "never",
+  "cline.preferredLanguage": "Japanese - 日本語",
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "prettier.trailingComma": "all"
 }
