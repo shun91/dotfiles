@@ -30,7 +30,8 @@
   "workbench.startupEditor": "newUntitledFile",
   "files.associations": {
     ".envrc": "dotenv",
-    "Dangerfile": "ruby"
+    "Dangerfile": "ruby",
+    "*.md": "markdown"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.restoreWindows": "all",
@@ -107,7 +108,7 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "One Dark Pro",
   "editor.renderWhitespace": "trailing",
   "gitlens.views.branches.branches.layout": "list",
   "editor.inlineSuggest.enabled": true,
@@ -167,7 +168,6 @@
 
   "markdown.marp.html": "all",
   "git.openRepositoryInParentFolders": "never",
-  "cline.preferredLanguage": "Japanese - 日本語",
   "github.copilot.nextEditSuggestions.enabled": false,
   "prettier.trailingComma": "all"
 }
