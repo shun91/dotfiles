@@ -100,8 +100,8 @@ alias grep='grep --color' # 色つける
 alias esl='exec $SHELL -l'
 alias nr="npm run"
 
-# rmはmvのエイリアスとする
-alias rm='rm_to_mv'
+# rmはmvのエイリアスとする → claude codeでrm実行が難しくなるので、rmtに変更
+alias rmt='rm_to_mv'
 function rm_to_mv() {
   command mv $1 ~/.Trash/
 }
