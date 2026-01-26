@@ -13,8 +13,10 @@
 [fetch]
   prune = true
 
-# ~/git/ghe/ 以下では git のユーザー情報を切り替える
-[includeIf "gitdir:~/git/ghe/"]
+# 特定ディレクトリ以下では git のユーザー情報を切り替える
+[includeIf "gitdir:~/workspace/repo/ghe/"]
+  path = ~/.gitconfig_ghe
+[includeIf "gitdir:~/.claude/"]
   path = ~/.gitconfig_ghe
 [init]
 	defaultBranch = main
