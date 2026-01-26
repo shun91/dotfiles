@@ -169,5 +169,25 @@
   "markdown.marp.html": "all",
   "git.openRepositoryInParentFolders": "never",
   "github.copilot.nextEditSuggestions.enabled": false,
-  "prettier.trailingComma": "all"
+  "prettier.trailingComma": "all",
+
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "chat.mcp.autostart": "newAndOutdated",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "scm.repositories.selectionMode": "single",
+  "chat.viewSessions.orientation": "stacked",
+  "chat.promptFilesRecommendations": {},
+
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.disableLoginPrompt": true,
+  "claudeCode.useTerminal": true
 }
