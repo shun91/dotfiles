@@ -187,6 +187,9 @@
   "chat.viewSessions.orientation": "stacked",
   "chat.promptFilesRecommendations": {},
 
+  // Claude Codeの ログが途切れないようにするため
+  "terminal.integrated.scrollback": 50000,
+
   "claudeCode.preferredLocation": "panel",
   "claudeCode.disableLoginPrompt": true,
   "claudeCode.useTerminal": true
