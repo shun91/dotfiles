@@ -5,7 +5,7 @@
 # 雑多な設定
 
 # PATH
-PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:$PATH"
+PATH="/usr/local/bin:/opt/homebrew/bin:/usr/bin:/usr/local/sbin:$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Add Visual Studio Code (code)
 PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
