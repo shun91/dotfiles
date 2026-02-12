@@ -179,6 +179,109 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 ###############################################################################
+# Git Worktree作成→セットアップ→VS Codeまでワンコマンドで実施
+# Usage: gwn <branch-name>
+function gwn() {
+  local name=$1
+
+  if [[ -z "$name" ]]; then
+    echo "Error: Branch name is required."
+    echo "Usage: gwn <branch-name>"
+    return 1
+  fi
+
+  # Gitルートディレクトリを取得
+  local git_root
+  git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+  if [[ -z "$git_root" ]]; then
+    echo "Error: Not a git repository."
+    return 1
+  fi
+
+  # リポジトリ名を取得
+  local repo_name
+  repo_name=$(basename "$git_root")
+
+  # ワークツリーの親ディレクトリ (../repo_name.worktrees)
+  local worktree_base="$(dirname "$git_root")/${repo_name}.worktrees"
+  
+  # 作成するワークツリーのパス
+  local target_path="$worktree_base/$name"
+
+  echo "🚀 Setting up worktree for '$name'..."
+  echo "   Location: $target_path"
+
+  # 1. worktreeの作成 (既存ブランチならcheckout、新規なら-b作成)
+  if git show-ref --verify --quiet "refs/heads/$name"; then
+    echo "Existing branch found. Checking out..."
+    git worktree add "$target_path" "$name"
+  else
+    echo "Creating new branch..."
+    git worktree add -b "$name" "$target_path"
+  fi
+
+  if [[ $? -ne 0 ]]; then
+    echo "❌ Failed to create worktree."
+    return 1
+  fi
+
+  # 2. 設定ファイルのコピー
+  echo "📄 Copying configuration files..."
+  
+  # .env ファイル群のコピー
+  setopt localoptions nullglob
+  for env_file in "$git_root"/.env*; do
+    local filename=$(basename "$env_file")
+    if [[ ! -f "$target_path/$filename" ]]; then
+      cp "$env_file" "$target_path/"
+      echo "   Copied: $filename"
+    else
+      echo "   Skipped: $filename (already exists)"
+    fi
+  done
+
+  # .claude/settings.local.json のコピー
+  if [[ -f "$git_root/.claude/settings.local.json" ]]; then
+    mkdir -p "$target_path/.claude"
+    if [[ ! -f "$target_path/.claude/settings.local.json" ]]; then
+      cp "$git_root/.claude/settings.local.json" "$target_path/.claude/"
+      echo "   Copied: .claude/settings.local.json"
+    else
+      echo "   Skipped: .claude/settings.local.json (already exists)"
+    fi
+  fi
+
+  # 3. 依存関係のインストール
+  cd "$target_path" || return 1
+
+  echo "📦 Detect package manager and installing dependencies..."
+  if [[ -f "pnpm-lock.yaml" ]]; then
+    echo "   Detected: pnpm"
+    pnpm install
+  elif [[ -f "yarn.lock" ]]; then
+    echo "   Detected: yarn"
+    yarn install
+  elif [[ -f "bun.lockb" ]]; then
+    echo "   Detected: bun"
+    bun install
+  elif [[ -f "package-lock.json" ]]; then
+    echo "   Detected: npm"
+    npm install
+  else
+    echo "⚠️ No lock file found. Skipping installation."
+  fi
+
+  # 4. VS Codeで開く
+  echo "💻 Opening in VS Code..."
+  if command -v code >/dev/null 2>&1; then
+    code .
+  else
+    echo "⚠️ 'code' command not found. Please install 'code' command in PATH."
+  fi
+
+  echo "✅ Worktree setup complete! You are now in: $target_path"
+}
+###############################################################################
 # 以下は最後に実行
 
 # PC毎のzshrcの読込
