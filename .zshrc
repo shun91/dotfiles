@@ -198,6 +198,9 @@ function gwn() {
     return 1
   fi
 
+  # 元のディレクトリを記憶
+  local original_dir="$PWD"
+
   # リポジトリ名を取得
   local repo_name
   repo_name=$(basename "$git_root")
@@ -251,7 +254,7 @@ function gwn() {
     fi
   fi
 
-  # 3. 依存関係のインストール
+  # 3. 依存関係のインストール (一時的にディレクトリ移動して実行)
   cd "$target_path" || return 1
 
   echo "📦 Detect package manager and installing dependencies..."
@@ -279,8 +282,12 @@ function gwn() {
     echo "⚠️ 'code' command not found. Please install 'code' command in PATH."
   fi
 
-  echo "✅ Worktree setup complete! You are now in: $target_path"
+  # 5. 元のディレクトリに戻る
+  cd "$original_dir"
+  echo "✅ Worktree setup complete!"
+  echo "   path: $target_path"
 }
+
 ###############################################################################
 # 以下は最後に実行
 
