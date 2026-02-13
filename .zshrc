@@ -198,6 +198,14 @@ function gwn() {
     return 1
   fi
 
+  # リモートの最新状態を同期
+  echo "🔄 Syncing with remote... (git pull)"
+  # --prune をつけることで、リモートで削除されたブランチの情報も整理します
+  git pull --prune
+  if [[ $? -ne 0 ]]; then
+    echo "⚠️  Warning: git pull failed. Proceeding with local state..."
+  fi
+
   # 元のディレクトリを記憶
   local original_dir="$PWD"
 
