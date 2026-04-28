@@ -14,6 +14,8 @@
   prune = true
 
 # 特定ディレクトリ以下では git のユーザー情報を切り替える
+[includeIf "gitdir:~/workspace/repo/ghec/"]
+  path = ~/.gitconfig_ghe
 [includeIf "gitdir:~/workspace/repo/ghe/"]
   path = ~/.gitconfig_ghe
 [includeIf "gitdir:~/.claude/"]
