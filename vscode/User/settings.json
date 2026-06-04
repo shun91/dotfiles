@@ -192,5 +192,7 @@
 
   "claudeCode.preferredLocation": "panel",
   "claudeCode.disableLoginPrompt": true,
-  "claudeCode.useTerminal": true
+  "claudeCode.useTerminal": true,
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "claudeCode.enableNewConversationShortcut": true
 }
