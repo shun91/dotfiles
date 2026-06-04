@@ -296,6 +296,30 @@ function gwn() {
   echo "   path: $target_path"
 }
 
+
+###############################################################################
+# ghq + fzf の爆速移動設定。Ctrl + G で起動し、Enterで移動、option+EnterでVS Code起動
+function ghq-fzf-cd() {
+    # --expect=alt-enter に指定
+    local res=$(ghq list -p | fzf --expect=alt-enter)
+    
+    [ -z "$res" ] && return
+
+    local key=$(echo "$res" | head -n 1)
+    local dir=$(echo "$res" | tail -n 1)
+
+    if [ -n "$dir" ]; then
+        if [ "$key" = "alt-enter" ]; then
+            code "$dir"  # Option + Enter なら VS Code で開く
+        else
+            cd "$dir"    # 普通の Enter なら cd 移動
+        fi
+    fi
+    zle reset-prompt
+}
+zle -N ghq-fzf-cd
+bindkey '^g' ghq-fzf-cd
+
 ###############################################################################
 # 以下は最後に実行
 
