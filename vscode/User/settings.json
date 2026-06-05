@@ -194,5 +194,7 @@
   "claudeCode.disableLoginPrompt": true,
   "claudeCode.useTerminal": true,
   "claudeCode.allowDangerouslySkipPermissions": true,
-  "claudeCode.enableNewConversationShortcut": true
+  "claudeCode.enableNewConversationShortcut": true,
+
+  "workbench.browser.openLocalhostLinks": false
 }
